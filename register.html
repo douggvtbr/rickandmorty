@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rick & Morty - Registro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+    body {
+      font-family: 'Press Start 2P', cursive;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-green-500 selection:text-black">
+
+  <header class="border-b-4 border-green-500 bg-slate-900 p-4 shadow-[0_4px_0_0_#15803d]">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-2">
+        <span class="text-green-400 text-xl tracking-tighter">[R&M]</span>
+        <h1 class="text-xs sm:text-sm text-green-400 tracking-wider">PORTAL_DB</h1>
+      </div>
+      <nav class="flex gap-4 text-[10px]">
+        <a href="index.html" class="hover:text-green-400 p-2">INICIO</a>
+        <a href="login.html" class="hover:text-green-400 p-2">INGRESAR</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenedor del Formulario -->
+  <main class="flex-1 flex items-center justify-center px-4 py-8">
+    <div class="bg-slate-900 border-4 border-slate-700 p-6 sm:p-8 w-full max-w-md shadow-[8px_8px_0_0_#1e293b] relative">
+      
+      <div class="absolute -top-3 left-4 bg-green-500 text-black text-[9px] px-2 py-0.5 font-bold border-2 border-black">
+        NUEVO_USUARIO
+      </div>
+
+      <h2 class="text-sm sm:text-base text-green-400 mb-6 text-center uppercase">
+        REGISTRARSE
+      </h2>
+
+      <!-- Mensaje de Error / Éxito -->
+      <div id="msg-box" class="hidden text-[9px] p-3 mb-4 border-2 border-black"></div>
+
+      <form id="registro" class="flex flex-col gap-4 text-[10px]">
+        <div>
+          <label class="block text-slate-400 mb-2">USUARIO / EMAIL:</label>
+          <input type="text" id="user" required class="w-full bg-slate-950 border-2 border-slate-700 p-3 text-white focus:border-green-500 focus:outline-none text-[10px]" placeholder="Ej: Morty123">
+        </div>
+
+        <div>
+          <label class="block text-slate-400 mb-2">CONTRASEÑA:</label>
+          <input type="password" id="password" required class="w-full bg-slate-950 border-2 border-slate-700 p-3 text-white focus:border-green-500 focus:outline-none text-[10px]" placeholder="******">
+        </div>
+
+        <button type="submit" class="mt-4 bg-green-500 hover:bg-green-400 text-slate-950 text-xs font-bold py-3 border-4 border-black shadow-[4px_4px_0_0_#fff] hover:shadow-[2px_2px_0_0_#fff] active:translate-x-1 active:translate-y-1 transition-all">
+          CREAR CUENTA
+        </button>
+      </form>
+
+      <div class="mt-6 text-center text-[9px] text-slate-400 border-t-2 border-slate-800 pt-4">
+        ¿Ya tienes cuenta? 
+        <a href="login.html" class="text-green-400 underline hover:text-green-300 block sm:inline mt-2 sm:mt-0">Ingresa aquí</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-slate-900 border-t-2 border-slate-800 p-4 text-center text-[9px] text-slate-500">
+    <p>PRESS START TO PLAY - RICK & MORTY API CONSUMER v1.0</p>
+  </footer>
+
+  <script src="auth.js"></script>
+</body>
+</html>
