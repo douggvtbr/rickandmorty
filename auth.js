@@ -30,10 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 msg.innerHTML = errors.join("<br>");
                 return; 
             }
-
-        
-
-            
+                   
             let users = JSON.parse(localStorage.getItem("users")) || [];
 
             let usuarioExiste = users.some(u => u.username.toLowerCase() === user.value.toLowerCase());
